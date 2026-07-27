@@ -33,9 +33,9 @@ export default function HomePage() {
                         </h1>
                         <p className={styles.aboutMeText}>
                             Hello dear guest 👋.<br></br><br></br> 
-                            I'm Burak, a Computer Engineer who just graduated from Gebze Technical University with honors. I've always been the type of person who wants to know why something works, not just how to use it, which is probably why I ended up loving operating systems and system design as much as building products people actually use.<br></br><br></br>
+                            I'm Burak, a Computer Engineer who just graduated from Gebze Technical University as a honor student. I've always been the type of person who wants to know why something works, not just how to use it, which is probably why I ended up loving operating systems and system design as much as building products people actually use.<br></br><br></br>
                             I've spent the last couple of years working on AI research, backend systems, and full-stack products using Java, Spring, Next.js, and React, always somewhere between the code and the people who end up using it.<br></br><br></br>
-                            When I step away from the keyboard, I'm usually playing acoustic guitar or, oddly enough, reading film critiques instead of actually watching the movies.
+                            When I step away from the keyboard, I'm usually playing acoustic guitar or, oddly enough, reading movie critiques instead of actually watching the movies.
                         </p>
                     </section>
 
