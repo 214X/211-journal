@@ -16,18 +16,18 @@
 .profile {
     display: flex;
     align-items: center;
-    padding: 2rem 0.5rem 2rem 0.5rem;
+    padding: 2rem 0.1rem 2rem 0.1rem;
 }
 
 .profileAvatar {
     border-radius: 50%;
     object-fit: cover;
     width: 100%;
-    max-width: 8rem;
+    max-width: 7rem;
     aspect-ratio: 1 / 1;
 
     /* margin*/
-    margin-left: 1rem;
+    margin-left: 0.1rem;
     margin-right: 1rem;
 }
 
@@ -36,11 +36,11 @@
 }
 
 .profileName {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 } 
 
 .profileJobTitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 .aboutMeSection{
@@ -49,12 +49,12 @@
 }
 
 .aboutMeTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 1rem 0rem 1rem 0rem;
 }
 
 .aboutMeText {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: justify;
 }
 
@@ -63,5 +63,25 @@
     .mainContainer {
         max-width: 60%;
         padding: 0.5rem;
+    }
+
+    .profile {
+        padding: 2rem 0.5rem 2rem 0.5rem;
+    }
+
+    .profileAvatar {
+        max-width: 8rem;
+
+        /* margin*/
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .profileName {
+        font-size: 2.5rem;
+    } 
+
+    .profileJobTitle {
+        font-size: 1.25rem;
     }
 }
