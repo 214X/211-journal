@@ -1,0 +1,21 @@
+.externalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2rem 0 2rem 0;
+
+    min-width: 100%;
+}
+
+.buttonContainer{
+    border-radius: 50px;
+    min-width: 6rem;
+    min-height: 2rem;
+    font-size: 1rem;
+
+    background-color: rgb(36, 36, 48);
+    background-color: rgb(206, 206, 226);
+    color: black;
+    font-weight: 300;
+}

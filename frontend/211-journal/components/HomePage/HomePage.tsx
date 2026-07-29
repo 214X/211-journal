@@ -1,7 +1,16 @@
+import { getLocale } from 'next-intl/server';
+import { getContent, Locale } from '@/i18n/getContent';
+
+import homePageContent from './homePageContent.json';
 import styles from "./HomePage.module.css"
 import Image from "next/image"
 
-export default function HomePage() {
+import LanguageButton from './HomeComponents/LanguageButton/LanguageButton';
+
+export default async function HomePage() {
+    const locale = await getLocale();
+    const t = getContent(homePageContent, locale as Locale);
+
     return (
         <div>
             <section className={styles.homePageWrapper}>
@@ -11,17 +20,17 @@ export default function HomePage() {
                     <div className={styles.profile}>
                         <Image
                             src="/me.jpeg"
-                            alt="Burak Kuruçay"
+                            alt={t.name}
                             width={128}
                             height={128}
                             className={styles.profileAvatar}
                         />
                         <div className={styles.profileTextContainer}>
                             <h1 className={styles.profileName}>
-                                Burak Kuruçay
+                                {t.name}
                             </h1>
                             <h2 className={styles.profileJobTitle}>
-                                Software Engineer
+                                {t.jobTitle}
                             </h2>
                         </div>
                     </div>
@@ -29,15 +38,18 @@ export default function HomePage() {
                     {/* About Me Section */}
                     <section className={styles.aboutMeSection}>
                         <h1 className={styles.aboutMeTitle}>
-                            Who Am I?
+                            {t.aboutTitle}
                         </h1>
                         <p className={styles.aboutMeText}>
-                            Hello dear guest 👋.<br></br><br></br> 
-                            I'm Burak, a Computer Engineer who just graduated from Gebze Technical University as a honor student. I've always been the type of person who wants to know why something works, not just how to use it, which is probably why I ended up loving operating systems and system design as much as building products people actually use.<br></br><br></br>
-                            I've spent the last couple of years working on AI research, backend systems, and full-stack products using Java, Spring, Next.js, and React, always somewhere between the code and the people who end up using it.<br></br><br></br>
-                            When I step away from the keyboard, I'm usually playing acoustic guitar or, oddly enough, reading movie critiques instead of actually watching the movies.
+                            {t.aboutParagraph1}<br/><br/>
+                            {t.aboutParagraph2}<br/><br/>
+                            {t.aboutParagraph3}<br/><br/>
+                            {t.aboutParagraph4}
                         </p>
                     </section>
+
+                    {/* Language Button */}
+                    <LanguageButton/>
 
                 </section>
             </section>
