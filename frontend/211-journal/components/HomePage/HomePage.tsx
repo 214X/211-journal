@@ -37,14 +37,13 @@ export default async function HomePage() {
 
                     {/* About Me Section */}
                     <section className={styles.aboutMeSection}>
-                        <h1 className={styles.aboutMeTitle}>
-                            {t.aboutTitle}
+                        <h1 className={styles.introductoryLine}>
+                            {t.introductoyLine}
                         </h1>
                         <p className={styles.aboutMeText}>
                             {t.aboutParagraph1}<br/><br/>
                             {t.aboutParagraph2}<br/><br/>
-                            {t.aboutParagraph3}<br/><br/>
-                            {t.aboutParagraph4}
+                            {t.aboutParagraph3}
                         </p>
                     </section>
 

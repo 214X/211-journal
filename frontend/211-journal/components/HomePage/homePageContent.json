@@ -2,19 +2,17 @@
     "tr": {
         "name": "Burak Kuruçay",
         "jobTitle": "Yazılım Mühendisi",
-        "aboutTitle": "Ben Kimim?",
-        "aboutParagraph1": "Merhaba değerli ziyaretçi 👋.",
-        "aboutParagraph2": "Ben Burak, Gebze Teknik Üniversitesi'nden onur öğrencisi olarak yeni mezun olmuş bir Bilgisayar Mühendisi'yim. Her zaman bir şeyin sadece nasıl kullanılacağını değil, neden çalıştığını anlamak isteyen biri oldum; bu da beni sistem tasarımını, insanların gerçekten kullandığı ürünler geliştirmek kadar sevmeye yöneltti.",
-        "aboutParagraph3": "Son birkaç yılımı Python, Java, Spring, Next.js ve React kullanarak yapay zeka araştırmaları, backend sistemleri ve full-stack ürünler üzerinde çalışarak geçirdim; her zaman kodla, o kodu kullanacak insanlar arasında bir yerde oldum.",
-        "aboutParagraph4": "Klavyeden uzaklaştığımda genelde akustik gitar çalıyorum, ya da film izleyip ardından üzerine kritikler ve eleştiriler okuyorum."
+        "introductoyLine": "Merhaba değerli ziyaretçi, 👋",
+        "aboutParagraph1": "Ben Burak, Gebze Teknik Üniversitesi'nden onur öğrencisi olarak yeni mezun olmuş bir Bilgisayar Mühendisi'yim. Her zaman bir şeyin sadece nasıl kullanılacağını değil, neden çalıştığını anlamak isteyen biri oldum; bu da beni sistem tasarımını, insanların gerçekten kullandığı ürünler geliştirmek kadar sevmeye yöneltti.",
+        "aboutParagraph2": "Son birkaç yılımı Python, Java, Spring, Next.js ve React kullanarak yapay zeka araştırmaları, backend sistemleri ve full-stack ürünler üzerinde çalışarak geçirdim; her zaman kodla, o kodu kullanacak insanlar arasında bir yerde oldum.",
+        "aboutParagraph3": "Klavyeden uzaklaştığımda genelde akustik gitar çalıyorum, ya da film izleyip ardından üzerine kritikler ve eleştiriler okuyorum."
     },
     "en": {
         "name": "Burak Kuruçay",
         "jobTitle": "Software Engineer",
-        "aboutTitle": "Who Am I?",
-        "aboutParagraph1": "Hello dear guest 👋.",
-        "aboutParagraph2": "I'm Burak, a Computer Engineer who just graduated from Gebze Technical University as a honor student. I've always been the type of person who wants to know why something works, not just how to use it, which is probably why I ended up loving system design as much as building products people actually use.",
-        "aboutParagraph3": "I've spent the last couple of years working on AI research, backend systems, and full-stack products using Python, Java, Spring, Next.js, and React, always somewhere between the code and the people who end up using it.",
-        "aboutParagraph4": "When I step away from the keyboard, I'm usually playing acoustic guitar, or watching movies and then reading critiques and reviews about them."
+        "introductoyLine": "Hello dear guest, 👋",
+        "aboutParagraph1": "I'm Burak, a Computer Engineer who just graduated from Gebze Technical University as a honor student. I've always been the type of person who wants to know why something works, not just how to use it, which is probably why I ended up loving system design as much as building products people actually use.",
+        "aboutParagraph2": "I've spent the last couple of years working on AI research, backend systems, and full-stack products using Python, Java, Spring, Next.js, and React, always somewhere between the code and the people who end up using it.",
+        "aboutParagraph3": "When I step away from the keyboard, I'm usually playing acoustic guitar, or watching movies and then reading critiques and reviews about them."
     }
 }
