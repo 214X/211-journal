@@ -1,0 +1,12 @@
+{
+    "tr": {
+        "toggleLabel": "Temayı değiştir",
+        "toLight": "Açık",
+        "toDark": "Koyu"
+    },
+    "en": {
+        "toggleLabel": "Toggle theme",
+        "toLight": "Light",
+        "toDark": "Dark"
+    }
+}
