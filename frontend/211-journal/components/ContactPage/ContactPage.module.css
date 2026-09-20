@@ -1,0 +1,22 @@
+.contactPageWrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--background);
+}
+
+.mainContainer {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .mainContainer {
+        max-width: 60%;
+        padding: 0.5rem;
+    }
+}
