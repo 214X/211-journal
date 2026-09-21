@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from 'next/navigation';
 import Providers from "@/app/providers";
+import Navbar from "@/components/Navbar/Navbar";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
             <body className="min-h-full flex flex-col">
                 <Providers>
                     <NextIntlClientProvider locale={locale} messages={{}}>
+                        <Navbar/>
                         {children}
                     </NextIntlClientProvider>
                 </Providers>

@@ -1,0 +1,22 @@
+{
+    "tr": {
+        "title": "İletişim",
+        "intro": "Benimle aşağıdaki kanallardan iletişime geçebilirsin.",
+        "labels": {
+            "email": "E-posta",
+            "phone": "Telefon",
+            "github": "GitHub",
+            "linkedin": "LinkedIn"
+        }
+    },
+    "en": {
+        "title": "Contact",
+        "intro": "You can reach me through the channels below.",
+        "labels": {
+            "email": "Email",
+            "phone": "Phone",
+            "github": "GitHub",
+            "linkedin": "LinkedIn"
+        }
+    }
+}

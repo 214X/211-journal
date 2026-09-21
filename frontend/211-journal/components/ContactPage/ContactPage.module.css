@@ -13,10 +13,59 @@
     padding: 1.5rem;
 }
 
+.title {
+    font-size: 1.8rem;
+    padding: 2rem 0 0.5rem 0;
+}
+
+.intro {
+    font-size: 1.1rem;
+    color: var(--foreground-muted);
+}
+
+.contactList {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.contactItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.1rem;
+}
+
+.contactItem:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.contactLabel {
+    color: var(--foreground-muted);
+}
+
+.contactValue {
+    color: var(--foreground);
+    text-decoration: none;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.contactValue:hover {
+    color: var(--accent);
+}
+
 
 @media (min-width: 768px) {
     .mainContainer {
         max-width: 60%;
         padding: 0.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
     }
 }
