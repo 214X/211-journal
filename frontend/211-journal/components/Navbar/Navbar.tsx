@@ -2,6 +2,7 @@
 
 import { Link, usePathname } from "@/i18n/navigation";
 import styles from "./Navbar.module.css";
+import ThemeButton from "./ThemeButton/ThemeButton";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -20,6 +21,8 @@ export default function Navbar() {
             >
                 Contact
             </Link>
+
+            <ThemeButton></ThemeButton>
         </nav>
     );
 }
