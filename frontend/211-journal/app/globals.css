@@ -1,7 +1,20 @@
-@import "tailwindcss";
+/* ============================================
+    1. TOKENS — TEXT
+   ============================================ */
+:root {
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --text-display: 2.5rem;
+  --text-title:   1.8rem;
+  --text-lead:    1.2rem;
+  --text-body:    1.0625rem;
+  --text-meta:    0.9rem;
+}
+
 
 /* ============================================
-    THEME TOKENS
+    2. TOKENS — COLOR
    ============================================ */
 :root,
 [data-theme="light"] {
@@ -30,11 +43,69 @@
   --accent-contrast:  #1a1816;
 }
 
+/* ============================================
+    3. RESET
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, picture, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ============================================
+    4. BODY
+   ============================================ */
 body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   transition: background-color 200ms ease, color 200ms ease;
 }
