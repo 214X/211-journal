@@ -5,8 +5,6 @@ import homePageContent from './homePageContent.json';
 import styles from "./HomePage.module.css"
 import Image from "next/image"
 
-import LanguageButton from './HomeComponents/LanguageButton/LanguageButton';
-
 export default async function HomePage() {
     const locale = await getLocale();
     const t = getContent(homePageContent, locale as Locale);
@@ -46,11 +44,6 @@ export default async function HomePage() {
                             {t.aboutParagraph3}
                         </p>
                     </section>
-
-                    {/* Controls */}
-                    <div className={styles.controls}>
-                        <LanguageButton/>
-                    </div>
 
                 </section>
             </section>

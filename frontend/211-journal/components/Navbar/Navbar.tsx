@@ -5,7 +5,8 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { getContent, Locale } from "@/i18n/getContent";
 import navbarContent from "./navbarContent.json";
 import styles from "./Navbar.module.css";
-import ThemeButton from "./ThemeButton/ThemeButton";
+
+import SettingsMenu from "./SettingsMenu/SettingsMenu";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -28,7 +29,10 @@ export default function Navbar() {
                 {t.contact}
             </Link>
 
-            <ThemeButton></ThemeButton>
+            {/* Decorative only, like the separator in the macOS dock */}
+            <span className={styles.divider} aria-hidden="true" />
+
+            <SettingsMenu />
         </nav>
     );
 }

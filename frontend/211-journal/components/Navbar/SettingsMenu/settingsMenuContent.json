@@ -1,0 +1,16 @@
+{
+    "tr": {
+        "settings": "Ayarlar",
+        "language": "Dil",
+        "theme": "Tema",
+        "light": "Açık",
+        "dark": "Koyu"
+    },
+    "en": {
+        "settings": "Settings",
+        "language": "Language",
+        "theme": "Theme",
+        "light": "Light",
+        "dark": "Dark"
+    }
+}
