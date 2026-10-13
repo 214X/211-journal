@@ -1,0 +1,55 @@
+.wrapper {
+    max-width: 100%;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.spotifyIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #1ed760;        /* Spotify brand green */
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cover {
+    border-radius: 0.75rem;
+    flex-shrink: 0;
+}
+
+.trackText {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;          /* lets the ellipsis below work inside flex */
+    max-width: 16rem;
+}
+
+.title {
+    font-size: var(--text-lead);
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track:hover .title {
+    color: var(--accent);
+}

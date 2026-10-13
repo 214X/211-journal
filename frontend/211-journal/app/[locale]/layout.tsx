@@ -3,8 +3,11 @@ import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from 'next/navigation';
 import Providers from "@/app/providers";
-import Navbar from "@/components/Navbar/Navbar";
 import "../globals.css";
+
+// COMPONENTS
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 import { 
     Geist,
@@ -66,6 +69,7 @@ export default async function LocaleLayout({
                     <NextIntlClientProvider locale={locale} messages={{}}>
                         <Navbar/>
                         {children}
+                        <Footer/>
                     </NextIntlClientProvider>
                 </Providers>
             </body>

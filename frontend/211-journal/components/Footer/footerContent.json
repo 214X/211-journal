@@ -1,0 +1,18 @@
+{
+    "tr": {
+        "heading": "Bağlantılar,",
+        "labels": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "email": "E-posta"
+        }
+    },
+    "en": {
+        "heading": "Links,",
+        "labels": {
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "email": "Email"
+        }
+    }
+}

@@ -61,7 +61,7 @@
 
 @media (min-width: 768px) {
     .mainContainer {
-        max-width: 60%;
+        max-width: var(--content-width);
         padding: 0.5rem;
     }
 
