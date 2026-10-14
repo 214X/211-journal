@@ -79,6 +79,13 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* In-page anchor links (#about) glide instead of jumping. Only when the OS allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;

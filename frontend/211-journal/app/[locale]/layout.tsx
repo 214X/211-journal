@@ -71,6 +71,8 @@ export default async function LocaleLayout({
     return (
         <html
             lang={locale}
+            // Next 16: turn smooth scrolling off during page changes, keep it for #anchors
+            data-scroll-behavior="smooth"
             suppressHydrationWarning
             className={`${instrumentSans.variable} ${instrumentSerif.variable} ${geistMono.variable}`}
         >
