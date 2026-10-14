@@ -3,6 +3,7 @@
    ============================================ */
 :root {
   --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   --text-display: 2.5rem;
@@ -76,6 +77,13 @@ html {
   height: 100%;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
+}
+
+/* In-page anchor links (#about) glide instead of jumping. Only when the OS allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
