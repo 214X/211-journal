@@ -1,5 +1,6 @@
 .navbar {
     position: fixed;
+    z-index: 10;   /* stay above positioned page content like the hero photo */
     bottom: 1rem;
     left: 0;
     right: 0;
