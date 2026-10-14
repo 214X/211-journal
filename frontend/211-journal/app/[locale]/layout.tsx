@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { notFound } from 'next/navigation';
 import Providers from "@/app/providers";
+import ThemeScript from "@/app/theme-script";
 import "../globals.css";
 
 // COMPONENTS
@@ -64,6 +65,9 @@ export default async function LocaleLayout({
             suppressHydrationWarning
             className={`${instrumentSans.variable} ${geistMono.variable}`}
         >
+            <head>
+                <ThemeScript/>
+            </head>
             <body>
                 <Providers>
                     <NextIntlClientProvider locale={locale} messages={{}}>
