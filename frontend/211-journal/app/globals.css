@@ -28,27 +28,35 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --background:       #faf7f2;
-  --surface:          #f3eee6;
-  --surface-hover:    #eae3d8;
-  --foreground:       #26221d;
-  --foreground-muted: #6e665c;
-  --border:           #e4dcd0;
-  --accent:           #b4654a;
-  --accent-contrast:  #fff9f4;
+  --background:       #f5f5f6;
+  --surface:          #ebebed;
+  --surface-hover:    #e1e1e4;
+  --foreground:       #18181b;
+  --foreground-muted: #5e5e66;
+  --border:           #dcdce0;
+  --accent:           #aa0505;
+  --accent-hover:     #8a0404;
+  --accent-subtle:    #f6dede;
+  --accent-contrast:  #ffffff;
+  --accent-text:      #aa0505;
+  --focus-ring:       #aa0505;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --background:       #1a1816;
-  --surface:          #24211e;
-  --surface-hover:    #2e2a26;
-  --foreground:       #ede7df;
-  --foreground-muted: #a79e93;
-  --border:           #332f2b;
-  --accent:           #d98e6f;
-  --accent-contrast:  #1a1816;
+  --background:       #0f0f11;
+  --surface:          #19191c;
+  --surface-hover:    #232327;
+  --foreground:       #ececee;
+  --foreground-muted: #9c9ca4;
+  --border:           #2c2c31;
+  --accent:           #aa0505;
+  --accent-hover:     #c00808;
+  --accent-subtle:    #3a0a0a;
+  --accent-contrast:  #ffffff;
+  --accent-text:      #aa0505;
+  --focus-ring:       #ececee;
 }
 
 /* ============================================

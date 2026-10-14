@@ -18,7 +18,7 @@
     --glass-sheen:     rgb(255 255 255 / 0.35);
     --glass-border:    rgb(0 0 0 / 0.08);
     --glass-highlight: rgb(255 255 255 / 0.8);
-    --glass-shadow:    rgb(60 40 20 / 0.12);
+    --glass-shadow:    rgb(20 20 30 / 0.12);
 }
 
 /*--- liquid glass: dark theme values ---*/

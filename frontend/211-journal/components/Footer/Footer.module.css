@@ -46,7 +46,7 @@
 }
 
 .linkValue:hover {
-    color: var(--accent);
+    color: var(--accent-text);
 }
 
 .copyright {
