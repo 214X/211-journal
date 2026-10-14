@@ -13,7 +13,8 @@ import Footer from "@/components/Footer/Footer";
 import { 
     Geist,
     Geist_Mono,
-    Instrument_Sans 
+    Instrument_Sans,
+    Instrument_Serif
 } from "next/font/google";
 
 
@@ -32,6 +33,14 @@ const instrumentSans = Instrument_Sans({
     variable: "--font-instrument-sans",
     subsets: ["latin", "latin-ext"],
     style: ["normal", "italic"],   // italik de gelsin
+    display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+    variable: "--font-instrument-serif",
+    weight: "400",
+    subsets: ["latin", "latin-ext"],
+    style: ["normal", "italic"],
     display: "swap",
 });
 // ----- FONTS ENDS ------------------------------------------------
@@ -63,7 +72,7 @@ export default async function LocaleLayout({
         <html
             lang={locale}
             suppressHydrationWarning
-            className={`${instrumentSans.variable} ${geistMono.variable}`}
+            className={`${instrumentSans.variable} ${instrumentSerif.variable} ${geistMono.variable}`}
         >
             <head>
                 <ThemeScript/>

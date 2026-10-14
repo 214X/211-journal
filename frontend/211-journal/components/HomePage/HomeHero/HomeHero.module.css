@@ -1,0 +1,172 @@
+/* ---------- mobile (default): photo on top, fading down into the red ---------- */
+.hero {
+    position: relative;   /* anchor for the text layer */
+    width: 100%;
+    height: 100svh;   /* the screen's current height (accounts for the mobile address bar) */
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.partSmall,
+.partMedium {
+    display: none;
+}
+
+.partLarge {
+    position: relative;   /* anchor for the photo frame */
+    overflow: hidden;
+    background-color: var(--accent);   /* the photo's faded edge blends into the red */
+}
+
+/* next/image fill always covers its parent, so the frame sets the photo's size per breakpoint */
+.photoFrame {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 72%;   /* mobile: top of the screen, the red continues below */
+}
+
+.photo {
+    object-fit: cover;              /* fill the frame without stretching */
+    object-position: right top;     /* keep the face in view */
+
+    /* Eased (ease-in-out) fade instead of a linear one, so it has no visible start and end lines.
+       Direction and length change per breakpoint. */
+    --fade-direction: to top;
+    --fade-length: 40%;
+    --fade: linear-gradient(
+        var(--fade-direction),
+        rgb(0 0 0 / 0)     0%,
+        rgb(0 0 0 / 0.013) calc(var(--fade-length) * 0.081),
+        rgb(0 0 0 / 0.049) calc(var(--fade-length) * 0.155),
+        rgb(0 0 0 / 0.104) calc(var(--fade-length) * 0.225),
+        rgb(0 0 0 / 0.175) calc(var(--fade-length) * 0.29),
+        rgb(0 0 0 / 0.259) calc(var(--fade-length) * 0.352),
+        rgb(0 0 0 / 0.352) calc(var(--fade-length) * 0.411),
+        rgb(0 0 0 / 0.45)  calc(var(--fade-length) * 0.467),
+        rgb(0 0 0 / 0.55)  calc(var(--fade-length) * 0.523),
+        rgb(0 0 0 / 0.648) calc(var(--fade-length) * 0.579),
+        rgb(0 0 0 / 0.741) calc(var(--fade-length) * 0.638),
+        rgb(0 0 0 / 0.825) calc(var(--fade-length) * 0.7),
+        rgb(0 0 0 / 0.896) calc(var(--fade-length) * 0.765),
+        rgb(0 0 0 / 0.951) calc(var(--fade-length) * 0.835),
+        rgb(0 0 0 / 0.987) calc(var(--fade-length) * 0.919),
+        rgb(0 0 0 / 1)     var(--fade-length)
+    );
+    -webkit-mask-image: var(--fade);   /* older Safari */
+    mask-image: var(--fade);
+}
+
+/* ---------- text layer ---------- */
+.content {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem 1.5rem 6rem;   /* bottom: clear the fixed navbar */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.25rem;
+
+    color: var(--accent-contrast);
+}
+
+.kicker {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);   /* mobile: sits on the photo, so red instead of white */
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(4rem, 19vw, 10.5rem);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;   /* extra room between the title and the lead */
+}
+
+.title em {
+    display: block;
+    padding-left: 0.6em;   /* "Journal" steps in under "211" */
+}
+
+.lead {
+    font-size: var(--text-body);
+    line-height: 1.6;
+    max-width: 30ch;
+    opacity: 0.92;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.primaryButton {
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    background-color: var(--accent-contrast);
+    color: var(--accent);
+}
+
+.secondaryLink {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 1.5px;
+}
+
+/* ---------- desktop: three columns, text on the red, photo fades in from the left ---------- */
+@media (min-width: 768px) {
+    .hero {
+        grid-template-columns: 10% 30% 60%;
+    }
+
+    .partSmall,
+    .partMedium {
+        display: block;
+    }
+
+    .partSmall {
+        background-color: var(--background);
+    }
+
+    .partMedium {
+        background-color: var(--accent);
+        border-bottom-left-radius: 4rem;   /* soft curve into the 10% column */
+    }
+
+    .photoFrame {
+        height: 100%;
+    }
+
+    .photo {
+        object-position: right center;
+        --fade-direction: to right;
+        --fade-length: 45%;
+    }
+
+    .content {
+        left: 10%;
+        width: 52%;   /* may overlap into the faded part of the photo */
+        padding: 0 0 0 clamp(1.5rem, 3.5vw, 3.5rem);
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .kicker {
+        font-size: 0.8rem;
+        color: inherit;   /* desktop: sits on the red column, so back to white */
+        opacity: 0.85;
+    }
+
+    .title {
+        font-size: clamp(5rem, 11vw, 10.5rem);
+    }
+}

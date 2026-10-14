@@ -4,6 +4,7 @@ import { getContent, Locale } from '@/i18n/getContent';
 import homePageContent from './homePageContent.json';
 import styles from "./HomePage.module.css"
 import Image from "next/image"
+import HomeHero from "./HomeHero/HomeHero";
 
 export default async function HomePage() {
     const locale = await getLocale();
@@ -11,7 +12,8 @@ export default async function HomePage() {
 
     return (
         <div>
-            <section className={styles.homePageWrapper}>
+            <HomeHero/>
+            <section id="about" className={styles.homePageWrapper}>
                 <section className={styles.mainContainer}>
 
                     {/* Profile Section */}
