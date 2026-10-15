@@ -1,14 +1,30 @@
 {
     "tr": {
-        "kicker": "Burak Kuruçay",
-        "lead": "Tüketiyorum, üretiyorum, öğreniyorum. Çoğu zaman aynı anda. Burası, hepsinin kaydını tuttuğum kara kutu.",
+        "owner": "Burak Kuruçay",
+        "ownerSuffix": "",
+        "words": ["Tüketiyorum", "üretiyorum", "öğreniyorum"],
+        "leadRest": "Çoğu zaman aynı anda. Burası, hepsinin kaydını tuttuğum kara kutu.",
         "primaryCta": "Ben kimim?",
-        "secondaryCta": "İletişime geç"
+        "psText": "Bir merhaba bırakmak istersen,",
+        "psLink": "buradan",
+        "photos": [
+            { "src": "/home-hero/abstract-art.webp", "caption": "Soyut Sanat", "alt": "Burak Kuruçay'ın yağlı boya tarzı portresi" },
+            { "src": "/home-hero/cartoon.webp",     "caption": "Çizgi Film",  "alt": "Burak Kuruçay'ın çizgi film tarzı portresi" },
+            { "src": "/home-hero/pixel.webp",       "caption": "Piksel",      "alt": "Burak Kuruçay'ın piksel sanatı portresi" }
+        ]
     },
     "en": {
-        "kicker": "Burak Kuruçay",
-        "lead": "I consume, I build, I learn. Usually all at once. This is the black box where it all gets recorded.",
+        "owner": "Burak Kuruçay",
+        "ownerSuffix": "'s",
+        "words": ["I consume", "I build", "I learn"],
+        "leadRest": "Usually all at once. This is the black box where it all gets recorded.",
         "primaryCta": "Who am I?",
-        "secondaryCta": "Get in touch"
+        "psText": "If you want to say hi,",
+        "psLink": "here",
+        "photos": [
+            { "src": "/home-hero/abstract-art.webp", "caption": "Abstract Art", "alt": "Oil-painting style portrait of Burak Kuruçay" },
+            { "src": "/home-hero/cartoon.webp",     "caption": "Cartoon",      "alt": "Cartoon style portrait of Burak Kuruçay" },
+            { "src": "/home-hero/pixel.webp",       "caption": "Pixel",        "alt": "Pixel art portrait of Burak Kuruçay" }
+        ]
     }
 }
