@@ -13,8 +13,8 @@ import Footer from "@/components/Footer/Footer";
 import { 
     Geist,
     Geist_Mono,
-    Instrument_Sans,
-    Instrument_Serif
+    Inter,
+    Bricolage_Grotesque
 } from "next/font/google";
 
 
@@ -29,18 +29,15 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
-const instrumentSans = Instrument_Sans({
-    variable: "--font-instrument-sans",
+const inter = Inter({
+    variable: "--font-inter",
     subsets: ["latin", "latin-ext"],
-    style: ["normal", "italic"],   // italik de gelsin
     display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
-    variable: "--font-instrument-serif",
-    weight: "400",
+const bricolage = Bricolage_Grotesque({
+    variable: "--font-bricolage",
     subsets: ["latin", "latin-ext"],
-    style: ["normal", "italic"],
     display: "swap",
 });
 // ----- FONTS ENDS ------------------------------------------------
@@ -74,7 +71,7 @@ export default async function LocaleLayout({
             // Next 16: turn smooth scrolling off during page changes, keep it for #anchors
             data-scroll-behavior="smooth"
             suppressHydrationWarning
-            className={`${instrumentSans.variable} ${instrumentSerif.variable} ${geistMono.variable}`}
+            className={`${inter.variable} ${bricolage.variable} ${geistMono.variable}`}
         >
             <head>
                 <ThemeScript/>

@@ -2,8 +2,8 @@
     1. TOKENS — TEXT
    ============================================ */
 :root {
-  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   --text-display: 2.5rem;
@@ -56,7 +56,7 @@
   --accent-hover:     #c00808;
   --accent-subtle:    #3a0a0a;
   --accent-contrast:  #ffffff;
-  --accent-text:      #aa0505;
+  --accent-text:      #ef4a3c;   /* lighter than --accent: #aa0505 is too dark to read as text here */
   --focus-ring:       #ececee;
 }
 
