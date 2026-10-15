@@ -55,7 +55,7 @@
 
 /* Bricolage has no italic: the browser slants the upright letters */
 .title em {
-    margin-top: 0.08em;   /* a little air under the digits */
+    margin: 0.08em 0 0 0.35em;   /* a little air under the digits, and stepped in to the right on purpose */
 
     font-size: 0.54em;
     font-weight: 500;
