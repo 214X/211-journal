@@ -1,0 +1,14 @@
+{
+    "tr": {
+        "figure": "ŞEK.",
+        "label": "Fotoğraf destesi. Ok tuşlarıyla gezinebilirsin.",
+        "previous": "Önceki fotoğraf",
+        "next": "Sonraki fotoğraf"
+    },
+    "en": {
+        "figure": "FIG.",
+        "label": "Photo deck. Use the arrow keys to browse.",
+        "previous": "Previous photo",
+        "next": "Next photo"
+    }
+}
