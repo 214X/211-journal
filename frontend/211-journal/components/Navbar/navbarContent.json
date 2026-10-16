@@ -1,10 +1,12 @@
 {
     "tr": {
         "home": "Ana Sayfa",
+        "about": "Hakkımda",
         "contact": "İletişim"
     },
     "en": {
         "home": "Home",
+        "about": "About",
         "contact": "Contact"
     }
 }
