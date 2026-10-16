@@ -1,0 +1,12 @@
+{
+    "tr": {
+        "before": "Geliştirici bu aralar müsait olmadığı için hakkımda sayfasını henüz hazırlayamadı. ",
+        "promise": "Kendisine en kısa zamanda hazırlayacağına dair söz verdi.",
+        "after": " Yakında burada olacak, söz."
+    },
+    "en": {
+        "before": "The developer hasn't been able to build the about page yet, since he's been busy lately. ",
+        "promise": "He promised himself he'd build it as soon as possible.",
+        "after": " It'll be here soon, promise."
+    }
+}

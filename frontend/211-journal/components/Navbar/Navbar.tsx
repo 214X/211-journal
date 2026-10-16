@@ -23,6 +23,12 @@ export default function Navbar() {
                 {t.home}
             </Link>
             <Link
+                href="/about"
+                className={pathname === '/about' ? styles.active : undefined}
+            >
+                {t.about}
+            </Link>
+            <Link
                 href="/contact"
                 className={pathname === '/contact' ? styles.active : undefined}
             >
