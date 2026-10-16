@@ -5,6 +5,7 @@ import homePageContent from './homePageContent.json';
 import styles from "./HomePage.module.css"
 import Image from "next/image"
 import HomeHero from "./HomeHero/HomeHero";
+import Typewriter from "@/components/Typewriter/Typewriter";
 
 export default async function HomePage() {
     const locale = await getLocale();
@@ -27,7 +28,7 @@ export default async function HomePage() {
                         />
                         <div className={styles.profileTextContainer}>
                             <h1 className={styles.profileName}>
-                                {t.name}
+                                <Typewriter text={t.name}/>
                             </h1>
                             <h2 className={styles.profileJobTitle}>
                                 {t.jobTitle}
