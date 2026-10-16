@@ -1,0 +1,41 @@
+/* the ghost and the typed text sit on top of each other in one grid cell */
+.typewriter {
+    display: inline-grid;
+}
+
+.typewriter > * {
+    grid-area: 1 / 1;
+}
+
+.ghost {
+    visibility: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.08em;
+    height: 0.9em;
+    margin-left: 0.06em;
+    vertical-align: -0.08em;
+    background: var(--cursor-color, var(--accent-text));
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor {
+        display: none;
+    }
+}

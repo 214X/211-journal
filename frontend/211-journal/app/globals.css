@@ -19,6 +19,7 @@
    ============================================ */
 :root {
   --content-width: 900px;
+  --measure:       40rem;   /* longest comfortable line for reading: ~65–70 characters of Inter */
 }
 
 
@@ -140,4 +141,15 @@ body {
   body {
     transition: none;
   }
+}
+
+
+/* ============================================
+    5. TEXT BLOCKS
+   ============================================ */
+/* Paragraphs stop at a readable line length, whatever box they sit in.
+   max-inline-size only caps: short text and narrow screens are untouched,
+   and a component's own class can still override it. */
+p {
+  max-inline-size: var(--measure);
 }
