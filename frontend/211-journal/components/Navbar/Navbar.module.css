@@ -6,12 +6,16 @@
     right: 0;
     margin-inline: auto;
     width: fit-content;
+    max-width: calc(100% - 2rem);   /* keep a 1rem gap to the screen edges, same as the bottom */
 
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 1.25rem;
     border-radius: 999px;
+
+    /* fluid on narrow screens: shrinks with the screen width, back to today's sizes from ~640px up */
+    gap: clamp(0.5rem, 2.5vw, 1rem);
+    padding: 0.75rem clamp(0.75rem, 4vw, 1.25rem);
+    font-size: clamp(0.875rem, 3.8vw, 1rem);
 
     /*--- liquid glass values ---*/
     --glass-tint:      color-mix(in srgb, var(--surface) 30%, transparent);
@@ -63,6 +67,11 @@
         --glass-tint: var(--surface);
         --glass-filter: none;
     }
+}
+
+/* a label never breaks into two lines ("Ana Sayfa") */
+.navbar a {
+    white-space: nowrap;
 }
 
 .active {
