@@ -1,9 +1,9 @@
 .footer {
-    /* narrow screens: 1.5rem from each edge; wide screens: stops at 990px */
-    width: min(100% - 3rem, 990px);
+    /* the shared content box: gutter from the screen edge, never wider than --content-width */
+    width: min(100% - var(--content-gutter) * 2, var(--content-width));
     margin-inline: auto;
     margin-top: 3rem;
-    padding: 2.5rem 0 7rem;
+    padding: 2.5rem var(--content-padding) 7rem;
     border-top: 1px solid var(--border);
 
     font-size: var(--text-body);
@@ -51,6 +51,6 @@
 
 .copyright {
     margin-top: 2rem;
-    font-size: var(--text-meta);
+    font-size: var(--text-small);
     color: var(--foreground-muted);
 }

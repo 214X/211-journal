@@ -36,7 +36,7 @@
 }
 
 .title {
-    font-size: var(--text-lead);
+    font-size: var(--text-body);
     font-weight: 600;
 
     white-space: nowrap;

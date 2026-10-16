@@ -6,11 +6,17 @@
   --font-display: var(--font-bricolage), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
-  --text-display: 2.5rem;
-  --text-title:   1.8rem;
-  --text-lead:    1.2rem;
-  --text-body:    1.0625rem;
-  --text-meta:    0.9rem;
+  /* reading text uses the device's own sans (as on gokyalc.in) */
+  --font-text:  ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  /* one scale for every text outside the hero, the same on phones and desktops
+     (sizes taken from paulstamatiou.com) */
+  --text-headline: 2rem;     /* 32px:   the greeting, the biggest line of the about section */
+  --text-display: 1.8rem;    /* 28.8px: a name or a page title */
+  --text-title:   1.25rem;   /* 20px:   section headings */
+  --text-body:    1.15rem;   /* 18.4px: reading text */
+  --text-small:   0.95rem;   /* 15.2px: lists, meta, secondary info */
+  --text-label:   0.8rem;    /* 12.8px: tiny labels */
 }
 
 
@@ -18,8 +24,16 @@
     1.1 TOKENS — LAYOUT
    ============================================ */
 :root {
-  --content-width: 900px;
-  --measure:       40rem;   /* longest comfortable line for reading: ~65–70 characters of Inter */
+  --content-width:   990px;   /* every page's content box (about, contact, footer); the hero has its own layout */
+  --content-gutter:  1.5rem;  /* space between the content box and the screen edge on narrow screens */
+  --content-padding: 0;       /* extra space inside the content box, left and right: wide screens only, see below */
+  --measure:         40rem;   /* longest comfortable line for reading: ~65–70 characters of Inter */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --content-padding: 0.5rem;
+  }
 }
 
 
@@ -129,7 +143,7 @@ body {
 
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

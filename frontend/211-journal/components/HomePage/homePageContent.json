@@ -2,17 +2,134 @@
     "tr": {
         "name": "Burak Kuruçay",
         "jobTitle": "Yazılım Mühendisi",
-        "introductoyLine": "Merhaba değerli ziyaretçi, 👋",
-        "aboutParagraph1": "Ben Burak, Gebze Teknik Üniversitesi'nden onur öğrencisi olarak yeni mezun olmuş bir Bilgisayar Mühendisi'yim. Her zaman bir şeyin sadece nasıl kullanılacağını değil, neden çalıştığını anlamak isteyen biri oldum; bu da beni sistem tasarımını, insanların gerçekten kullandığı ürünler geliştirmek kadar sevmeye yöneltti.",
-        "aboutParagraph2": "Son birkaç yılımı Python, Java, Spring, Next.js ve React kullanarak yapay zeka araştırmaları, backend sistemleri ve full-stack ürünler üzerinde çalışarak geçirdim; her zaman kodla, o kodu kullanacak insanlar arasında bir yerde oldum.",
-        "aboutParagraph3": "Klavyeden uzaklaştığımda genelde akustik gitar çalıyorum, ya da film izleyip ardından üzerine kritikler ve eleştiriler okuyorum."
+        "greetingBefore": "Selam, internetin ",
+        "greetingEmphasis": "kısmen",
+        "greetingAfter": "bana ait olan yüzüne hoş geldin.",
+        "aboutParagraphs": [
+            [
+                {
+                    "text": "Ben Burak, "
+                },
+                {
+                    "text": "yazılım mühendisiyim",
+                    "mark": "red"
+                },
+                {
+                    "text": ". "
+                },
+                {
+                    "text": "Domain ücretini ödemeye devam ettiğim sürece",
+                    "mark": "underline"
+                },
+                {
+                    "text": " burası benim kara kutum: öğrendiklerimi, tükettiklerimi, ürettiklerimi, kısacası kafamın içinde dolaşan her şeyi burada biriktiriyorum."
+                }
+            ],
+            [
+                {
+                    "age": true
+                },
+                {
+                    "text": " yaşındayım ve İstanbul'da, Beyoğlu'nda yaşıyorum. Gebze Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum; yani anlayacağın, çoğu zaman bir klavyenin başındayım."
+                }
+            ],
+            [
+                {
+                    "text": "Klavyenin başından kalktığımda ya akustik gitarımı elime alıyorum ya da bir film açıp ardından eleştirilerini okumaya dalıyorum. Araya giren türlü türlü hobiler de cabası."
+                }
+            ],
+            [
+                {
+                    "text": "Zihnimden geçenleri şimdilik burada blog yazıları olarak paylaşıyorum. Yazılarıma "
+                },
+                {
+                    "text": "buradan",
+                    "href": "#"
+                },
+                {
+                    "text": " ulaşabilirsin."
+                }
+            ],
+            [
+                {
+                    "text": "Hakkımda daha fazlasını merak ediyorsan "
+                },
+                {
+                    "text": "şuraya",
+                    "href": "#"
+                },
+                {
+                    "text": " bir göz at."
+                }
+            ]
+        ]
     },
     "en": {
         "name": "Burak Kuruçay",
         "jobTitle": "Software Engineer",
-        "introductoyLine": "Hello dear guest, 👋",
-        "aboutParagraph1": "I'm Burak, a Computer Engineer who just graduated from Gebze Technical University as a honor student. I've always been the type of person who wants to know why something works, not just how to use it, which is probably why I ended up loving system design as much as building products people actually use.",
-        "aboutParagraph2": "I've spent the last couple of years working on AI research, backend systems, and full-stack products using Python, Java, Spring, Next.js, and React, always somewhere between the code and the people who end up using it.",
-        "aboutParagraph3": "When I step away from the keyboard, I'm usually playing acoustic guitar, or watching movies and then reading critiques and reviews about them."
+        "greetingBefore": "Hey, welcome to the corner of the internet that's ",
+        "greetingEmphasis": "partly",
+        "greetingAfter": "mine.",
+        "aboutParagraphs": [
+            [
+                {
+                    "text": "I'm Burak, "
+                },
+                {
+                    "text": "a software engineer",
+                    "mark": "red"
+                },
+                {
+                    "text": ". "
+                },
+                {
+                    "text": "As long as I keep paying for the domain",
+                    "mark": "underline"
+                },
+                {
+                    "text": ", this is my black box: the place where I collect everything I learn, consume and make; in short, whatever is wandering around in my head."
+                }
+            ],
+            [
+                {
+                    "text": "I'm "
+                },
+                {
+                    "age": true
+                },
+                {
+                    "text": " years old and I live in Beyoğlu, Istanbul. I graduated in Computer Engineering from Gebze Technical University, so as you can guess, I'm usually sitting at a keyboard."
+                }
+            ],
+            [
+                {
+                    "text": "When I do get up from it, I either pick up my acoustic guitar or put on a film and then fall down a rabbit hole of reviews about it. Plus whatever other hobby wanders in."
+                }
+            ],
+            [
+                {
+                    "text": "For now, I share what's on my mind here as blog posts. You can find them "
+                },
+                {
+                    "text": "here",
+                    "href": "#"
+                },
+                {
+                    "text": "."
+                }
+            ],
+            [
+                {
+                    "text": "And if you're curious to know more about me, "
+                },
+                {
+                    "text": "take a look over here",
+                    "href": "#"
+                },
+                {
+                    "text": "."
+                }
+            ]
+        ]
     }
 }

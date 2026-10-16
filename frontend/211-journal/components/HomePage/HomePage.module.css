@@ -9,14 +9,25 @@
 }
 
 .mainContainer {
+    /* the shared content box: gutter from the screen edge, never wider than --content-width */
+    width: min(100% - var(--content-gutter) * 2, var(--content-width));
+    padding: 1.5rem var(--content-padding);
+}
+
+/* the whole about section is one --measure wide column, centered in the content box:
+   photo, greeting and paragraphs all start from the same left edge */
+.profile,
+.aboutMeSection {
     width: 100%;
-    padding: 1.5rem;
+    max-inline-size: var(--measure);
+    margin-inline: auto;
 }
 
 .profile {
     display: flex;
     align-items: center;
-    padding: 2rem 0.1rem 2rem 0.1rem;
+    gap: 1.25rem;
+    padding-block: 2rem;
 }
 
 .profileAvatar {
@@ -27,10 +38,7 @@
     aspect-ratio: 1 / 1;
     height: auto;
     flex-shrink: 0;
-
-    /* margin*/
-    margin-left: 0.1rem;
-    margin-right: 1rem;
+    box-shadow: 0 7px 18px -6px rgb(0 0 0 / 0.45);   /* light shadow behind the photo */
 }
 
 .profileTextContainer {
@@ -38,54 +46,80 @@
 }
 
 .profileName {
-    font-size: 1.8rem;
+    font-size: var(--text-display);
 } 
 
 .profileJobTitle {
-    font-size: 1.2rem;
+    font-size: var(--text-body);
     color: var(--foreground-muted);
 }
 
 .aboutMeSection{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .introductoryLine {
-    font-size: 1.8rem;
-    padding: 1rem 0rem 1rem 0rem;
+    font-size: var(--text-headline);
+    line-height: 1.25;
+    margin: 0.5rem 0 1.25rem;   /* closer to its paragraphs than to the profile above */
+}
+
+/* the one word the greeting leans on ("kısmen" / "partly"):
+   red and in the display font, like "Journal" in the hero */
+.greetingEmphasis {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent-text);
+}
+
+/* marked pieces of the about text */
+.markRed {
+    color: var(--accent-text);
+}
+
+.markUnderline {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-text);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
 }
 
 .aboutMeText {
-    font-size: 1.1rem;
-    text-align: justify;
+    font-size: var(--text-body);
+}
+
+.aboutMeText + .aboutMeText {
+    margin-top: 1.25rem;
+}
+
+/* the live age: red, and every digit the same width so the number does not wobble while it counts */
+.age {
+    color: var(--accent-text);
+    font-variant-numeric: tabular-nums;
+}
+
+/* links keep the text colour and only get a red underline, so red text stays rare */
+.link {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-text);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: color 150ms ease;
+}
+
+.link:hover {
+    color: var(--accent-text);
 }
 
 
 @media (min-width: 768px) {
     .mainContainer {
-        max-width: var(--content-width);
-        padding: 0.5rem;
-    }
-
-    .profile {
-        padding: 2rem 0.5rem 2rem 0.5rem;
+        padding-block: 0.5rem;
     }
 
     .profileAvatar {
         max-width: 8rem;
-
-        /* margin*/
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .profileName {
-        font-size: 2.5rem;
-    } 
-
-    .profileJobTitle {
-        font-size: 1.25rem;
     }
 }
