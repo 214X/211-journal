@@ -2,11 +2,13 @@
     "tr": {
         "home": "Ana Sayfa",
         "about": "Hakkımda",
+        "blogs": "Bloglar",
         "contact": "İletişim"
     },
     "en": {
         "home": "Home",
         "about": "About",
+        "blogs": "Blogs",
         "contact": "Contact"
     }
 }
