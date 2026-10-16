@@ -9,18 +9,20 @@
 }
 
 .mainContainer {
-    width: 100%;
-    padding: 1.5rem;
+    /* the shared content box: gutter from the screen edge, never wider than --content-width */
+    width: min(100% - var(--content-gutter) * 2, var(--content-width));
+    padding: 1.5rem var(--content-padding);
 }
 
 .title {
-    font-size: 1.8rem;
+    font-size: var(--text-display);
     padding: 2rem 0 0.5rem 0;
 }
 
 .intro {
-    font-size: 1.1rem;
+    font-size: var(--text-body);
     color: var(--foreground-muted);
+    margin-inline: auto;   /* the paragraph is --measure wide at most; centered inside the content box */
 }
 
 .contactList {
@@ -36,7 +38,7 @@
 
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
-    font-size: 1.1rem;
+    font-size: var(--text-body);
 }
 
 .contactItem:first-child {
@@ -61,11 +63,6 @@
 
 @media (min-width: 768px) {
     .mainContainer {
-        max-width: var(--content-width);
-        padding: 0.5rem;
-    }
-
-    .title {
-        font-size: 2.5rem;
+        padding-block: 0.5rem;
     }
 }

@@ -23,7 +23,7 @@
     background: none;
     border: none;
 
-    font-size: var(--text-meta);
+    font-size: var(--text-small);
     color: var(--foreground-muted);
     cursor: pointer;
 }
