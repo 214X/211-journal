@@ -29,12 +29,13 @@
 [data-theme="light"] {
   color-scheme: light;
 
-  --background:       #f5f5f6;
-  --surface:          #ebebed;
-  --surface-hover:    #e1e1e4;
+  /* neutral grey mixed with 4% of --accent (#aa0505) */
+  --background:       #e7dfdf;   /* was #f5f5f6 */
+  --surface:          #ded4d4;   /* was #ebebed */
+  --surface-hover:    #d4caca;   /* was #e1e1e4 */
   --foreground:       #18181b;
-  --foreground-muted: #5e5e66;
-  --border:           #dcdce0;
+  --foreground-muted: #5f5858;   /* was #5e5e66 */
+  --border:           #ccc0c0;   /* was #dcdce0 */
   --accent:           #aa0505;
   --accent-hover:     #8a0404;
   --accent-subtle:    #f6dede;
@@ -46,17 +47,18 @@
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --background:       #0f0f11;
-  --surface:          #19191c;
-  --surface-hover:    #232327;
+  /* near-black grey mixed with 2.5% of --accent (#aa0505) */
+  --background:       #120e0e;   /* was #0f0f11 */
+  --surface:          #1c1818;   /* was #19191c */
+  --surface-hover:    #242020;   /* was #232327 */
   --foreground:       #ececee;
-  --foreground-muted: #9c9ca4;
-  --border:           #2c2c31;
+  --foreground-muted: #9c9898;   /* was #9c9ca4 */
+  --border:           #2e2a2a;   /* was #2c2c31 */
   --accent:           #aa0505;
   --accent-hover:     #c00808;
   --accent-subtle:    #3a0a0a;
   --accent-contrast:  #ffffff;
-  --accent-text:      #ef4a3c;   /* lighter than --accent: #aa0505 is too dark to read as text here */
+  --accent-text:      #e64c4c;   /* was #ef4a3c; same hue as --accent, lighter because #aa0505 is too dark to read as text here */
   --focus-ring:       #ececee;
 }
 
