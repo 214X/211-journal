@@ -1,10 +1,12 @@
 {
     "tr": {
         "home": "Ana Sayfa",
+        "blogs": "Bloglar",
         "contact": "İletişim"
     },
     "en": {
         "home": "Home",
+        "blogs": "Blogs",
         "contact": "Contact"
     }
 }

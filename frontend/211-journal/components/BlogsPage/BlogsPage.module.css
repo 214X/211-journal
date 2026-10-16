@@ -1,0 +1,25 @@
+.blogsPageWrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    /* the notice sits in the middle of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice {
+    width: min(100% - var(--content-gutter) * 2, 40rem);
+    font-size: var(--text-title);
+    color: var(--foreground);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* the promise sentence: same type and red as "partly" in the home greeting */
+.promise {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent-text);
+}

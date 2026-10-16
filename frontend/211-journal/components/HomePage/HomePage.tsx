@@ -4,6 +4,7 @@ import { getContent, Locale } from '@/i18n/getContent';
 import homePageContent from './homePageContent.json';
 import styles from "./HomePage.module.css"
 import Image from "next/image"
+import { Link } from "@/i18n/navigation";
 import HomeHero from "./HomeHero/HomeHero";
 import Typewriter from "@/components/Typewriter/Typewriter";
 import LiveAge from "@/components/LiveAge/LiveAge";
@@ -21,6 +22,8 @@ type AboutPart = { text?: string; mark?: string; href?: string; age?: boolean; d
 // one piece of an about paragraph: plain text, marked text, a link, or the live age
 function renderPart(part: AboutPart, i: number) {
     if (part.age) return <LiveAge key={i} birth={BIRTH} decimals={9} className={styles.age}/>;
+    // a path inside the site goes through Link so the visitor stays in their language
+    if (part.href?.startsWith('/')) return <Link key={i} href={part.href} className={styles.link}>{part.text}</Link>;
     if (part.href) return <a key={i} href={part.href} className={styles.link}>{part.text}</a>;
     if (part.mark) return <span key={i} className={MARKS[part.mark as keyof typeof MARKS]}>{part.text}</span>;
     return part.text;
