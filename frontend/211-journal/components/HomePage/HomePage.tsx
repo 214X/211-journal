@@ -6,6 +6,25 @@ import styles from "./HomePage.module.css"
 import Image from "next/image"
 import HomeHero from "./HomeHero/HomeHero";
 import Typewriter from "@/components/Typewriter/Typewriter";
+import LiveAge from "@/components/LiveAge/LiveAge";
+
+// how a marked piece of about text is drawn ("mark" in homePageContent.json)
+const MARKS = {
+    red:       styles.markRed,
+    underline: styles.markUnderline,
+};
+
+const BIRTH = "2003-02-03T00:00:00+03:00";   // 03.02.2003, Istanbul time
+
+type AboutPart = { text?: string; mark?: string; href?: string; age?: boolean };
+
+// one piece of an about paragraph: plain text, marked text, a link, or the live age
+function renderPart(part: AboutPart, i: number) {
+    if (part.age) return <LiveAge key={i} birth={BIRTH} className={styles.age}/>;
+    if (part.href) return <a key={i} href={part.href} className={styles.link}>{part.text}</a>;
+    if (part.mark) return <span key={i} className={MARKS[part.mark as keyof typeof MARKS]}>{part.text}</span>;
+    return part.text;
+}
 
 export default async function HomePage() {
     const locale = await getLocale();
@@ -39,13 +58,15 @@ export default async function HomePage() {
                     {/* About Me Section */}
                     <section className={styles.aboutMeSection}>
                         <h1 className={styles.introductoryLine}>
-                            {t.introductoyLine}
+                            {t.greetingBefore}
+                            <em className={styles.greetingEmphasis}>{t.greetingEmphasis}</em>
+                            {" "}{t.greetingAfter}
                         </h1>
-                        <p className={styles.aboutMeText}>
-                            {t.aboutParagraph1}<br/><br/>
-                            {t.aboutParagraph2}<br/><br/>
-                            {t.aboutParagraph3}
-                        </p>
+                        {t.aboutParagraphs.map((paragraph, i) => (
+                            <p key={i} className={styles.aboutMeText}>
+                                {(paragraph as AboutPart[]).map(renderPart)}
+                            </p>
+                        ))}
                     </section>
 
                 </section>
