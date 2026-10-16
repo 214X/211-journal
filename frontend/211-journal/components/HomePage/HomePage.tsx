@@ -16,11 +16,11 @@ const MARKS = {
 
 const BIRTH = "2003-02-03T00:00:00+03:00";   // 03.02.2003, Istanbul time
 
-type AboutPart = { text?: string; mark?: string; href?: string; age?: boolean };
+type AboutPart = { text?: string; mark?: string; href?: string; age?: boolean; divider?: boolean };
 
 // one piece of an about paragraph: plain text, marked text, a link, or the live age
 function renderPart(part: AboutPart, i: number) {
-    if (part.age) return <LiveAge key={i} birth={BIRTH} className={styles.age}/>;
+    if (part.age) return <LiveAge key={i} birth={BIRTH} decimals={9} className={styles.age}/>;
     if (part.href) return <a key={i} href={part.href} className={styles.link}>{part.text}</a>;
     if (part.mark) return <span key={i} className={MARKS[part.mark as keyof typeof MARKS]}>{part.text}</span>;
     return part.text;
@@ -62,11 +62,14 @@ export default async function HomePage() {
                             <em className={styles.greetingEmphasis}>{t.greetingEmphasis}</em>
                             {" "}{t.greetingAfter}
                         </h1>
-                        {t.aboutParagraphs.map((paragraph, i) => (
-                            <p key={i} className={styles.aboutMeText}>
-                                {(paragraph as AboutPart[]).map(renderPart)}
-                            </p>
-                        ))}
+                        {(t.aboutParagraphs as AboutPart[][]).map((paragraph, i) =>
+                            // a paragraph that is just { "divider": true } becomes a * * * break
+                            paragraph[0]?.divider
+                                ? <hr key={i} className={styles.divider}/>
+                                : <p key={i} className={styles.aboutMeText}>
+                                    {paragraph.map(renderPart)}
+                                  </p>
+                        )}
                     </section>
 
                 </section>

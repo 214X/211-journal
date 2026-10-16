@@ -15,44 +15,52 @@
                     "mark": "red"
                 },
                 {
-                    "text": ". "
+                    "text": ". Burası da benim kara kutum. Öğrendiğim, tükettiğim, ürettiğim, aklımdan geçen ne varsa burada biriktiriyorum. Tabii "
                 },
                 {
-                    "text": "Domain ücretini ödemeye devam ettiğim sürece",
+                    "text": "domain ücretini ödemeye devam ettiğim sürece",
                     "mark": "underline"
                 },
                 {
-                    "text": " burası benim kara kutum: öğrendiklerimi, tükettiklerimi, ürettiklerimi, kısacası kafamın içinde dolaşan her şeyi burada biriktiriyorum."
+                    "text": "."
                 }
             ],
             [
+                {
+                    "divider": true
+                }
+            ],
+            [
+                {
+                    "text": "Gebze Teknik Üniversitesi Bilgisayar Mühendisliği bölümünden mezunum. Yani tahmin edebileceğin üzere günümün büyük bir kısmı klavye başında geçiyor. Bu sürede yalnızca teknolojileri kullanmayı değil, arkalarında ne olup bittiğini anlamayı da önemsiyorum. Çünkü sağlam bir bilgisayar bilimi temelinin hem yeni teknolojileri hızlıca öğrenmeyi hem de uzun ömürlü çözümler üretmeyi mümkün kıldığına inanıyorum. Bir mühendisin, edindiği bilgiyle hayatın her köşesine dokunabilmesi gerektiğini düşünüyorum. "
+                },
+                {
+                    "text": "Misyonum ise bilgisayar mühendisliğinden öğrendiklerimle her renkten probleme çözüm üretebilmek",
+                    "mark": "red"
+                },
+                {
+                    "text": ". Bir fikrin tasarım ve geliştirme aşamalarından geçip insanların gerçekten kullandığı bir ürüne dönüşmesini izlemek, kullanıcıların geri bildirimlerini almak ve yaptığım işin gerçek bir sorunu çözdüğünü bilmek bu işte beni en çok motive eden şeyler."
+                }
+            ],
+            [
+                {
+                    "text": "Tam olarak "
+                },
                 {
                     "age": true
                 },
                 {
-                    "text": " yaşındayım ve İstanbul'da, Beyoğlu'nda yaşıyorum. Gebze Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum; yani anlayacağın, çoğu zaman bir klavyenin başındayım."
+                    "text": " yaşındayım ve İstanbul'da, Beyoğlu'nda yaşıyorum. Klavye başında olmadığım zamanlarda genelde akustik gitarımı çalıyorum, yeni yerler geziyorum ya da bir film izleyip ardından hakkında yazılan eleştirileri okuyorum."
                 }
             ],
             [
                 {
-                    "text": "Klavyenin başından kalktığımda ya akustik gitarımı elime alıyorum ya da bir film açıp ardından eleştirilerini okumaya dalıyorum. Araya giren türlü türlü hobiler de cabası."
+                    "divider": true
                 }
             ],
             [
                 {
-                    "text": "Zihnimden geçenleri şimdilik burada blog yazıları olarak paylaşıyorum. Yazılarıma "
-                },
-                {
-                    "text": "buradan",
-                    "href": "#"
-                },
-                {
-                    "text": " ulaşabilirsin."
-                }
-            ],
-            [
-                {
-                    "text": "Hakkımda daha fazlasını merak ediyorsan "
+                    "text": "Beni ve profesyonel hayatımı daha yakından tanımak istersen "
                 },
                 {
                     "text": "şuraya",
@@ -60,6 +68,18 @@
                 },
                 {
                     "text": " bir göz at."
+                }
+            ],
+            [
+                {
+                    "text": "Kafamdan geçenleri şimdilik yazı olarak burada paylaşıyorum. Yazdıklarıma "
+                },
+                {
+                    "text": "buradan",
+                    "href": "#"
+                },
+                {
+                    "text": " ulaşabilirsin."
                 }
             ]
         ]
@@ -80,38 +100,55 @@
                     "mark": "red"
                 },
                 {
-                    "text": ". "
+                    "text": ". This place is my black box. Whatever I learn, consume or make, whatever's on my mind, ends up here. "
                 },
                 {
                     "text": "As long as I keep paying for the domain",
                     "mark": "underline"
                 },
                 {
-                    "text": ", this is my black box: the place where I collect everything I learn, consume and make; in short, whatever is wandering around in my head."
+                    "text": ", anyway."
                 }
             ],
             [
                 {
-                    "text": "I'm "
+                    "divider": true
+                }
+            ],
+            [
+                {
+                    "text": "I graduated in Computer Engineering from Gebze Technical University, so as you can probably guess, most of my day is spent at a keyboard. In that time, I care not only about using technologies but also about understanding what goes on behind them. That's because I believe a strong foundation in computer science makes it possible both to pick up new technologies quickly and to build solutions that last. I think an engineer should be able to use what they know to touch every corner of life. "
+                },
+                {
+                    "text": "My mission is to use what I've learned in computer engineering to solve problems of every color",
+                    "mark": "red"
+                },
+                {
+                    "text": ". Watching an idea go through design and development and turn into a product people actually use, hearing what users think, and knowing my work solves a real problem are what motivate me most in this job."
+                }
+            ],
+            [
+                {
+                    "text": "I'm exactly "
                 },
                 {
                     "age": true
                 },
                 {
-                    "text": " years old and I live in Beyoğlu, Istanbul. I graduated in Computer Engineering from Gebze Technical University, so as you can guess, I'm usually sitting at a keyboard."
+                    "text": " years old and I live in Beyoğlu, Istanbul. When I'm not at a keyboard, I'm usually playing my acoustic guitar, exploring new places, or watching a film and then reading what critics wrote about it."
                 }
             ],
             [
                 {
-                    "text": "When I do get up from it, I either pick up my acoustic guitar or put on a film and then fall down a rabbit hole of reviews about it. Plus whatever other hobby wanders in."
+                    "divider": true
                 }
             ],
             [
                 {
-                    "text": "For now, I share what's on my mind here as blog posts. You can find them "
+                    "text": "If you'd like to get to know me and my professional life a little better, "
                 },
                 {
-                    "text": "here",
+                    "text": "take a look over here",
                     "href": "#"
                 },
                 {
@@ -120,10 +157,10 @@
             ],
             [
                 {
-                    "text": "And if you're curious to know more about me, "
+                    "text": "For now, I share what's on my mind here in writing. You can find what I've written "
                 },
                 {
-                    "text": "take a look over here",
+                    "text": "here",
                     "href": "#"
                 },
                 {
