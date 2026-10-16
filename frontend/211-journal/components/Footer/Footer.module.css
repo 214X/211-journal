@@ -1,6 +1,6 @@
 .footer {
-    /* narrow screens: 1.5rem from each edge; wide screens: lines up with the page text */
-    width: min(100% - 3rem, var(--content-width) - 1rem);
+    /* narrow screens: 1.5rem from each edge; wide screens: stops at 990px */
+    width: min(100% - 3rem, 990px);
     margin-inline: auto;
     margin-top: 3rem;
     padding: 2.5rem 0 7rem;
