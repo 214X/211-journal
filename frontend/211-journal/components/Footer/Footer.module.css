@@ -6,51 +6,52 @@
     padding: 2.5rem var(--content-padding) 7rem;
     border-top: 1px solid var(--border);
 
-    font-size: var(--text-body);
+    /* same size as the about text */
+    font-size: 1rem;
     color: var(--foreground);
 }
 
 .columns {
     display: flex;
     justify-content: space-between;
-    /* wrap-reverse: when they don't fit side by side, the music goes above the links.
+    /* wrap-reverse: when they don't fit side by side, the music goes above the signature.
        It also flips the cross axis, so flex-end is what aligns the columns to the top. */
     flex-wrap: wrap-reverse;
     align-items: flex-end;
     gap: 2.5rem 1rem;
 }
 
-.heading {
-    font-weight: 500;
-    margin-bottom: 1rem;
+.signature {
+    max-inline-size: 34rem;
+    color: var(--foreground-muted);
 }
 
-.linkList {
+.signatureName {
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+/* the counter: red like the live age, every digit the same width so it does not wobble;
+   it moves to the next line as one piece instead of breaking in the middle */
+.siteAge {
+    color: var(--accent-text);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.signatureLinks {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
 }
 
-.linkItem {
-    display: flex;
-    gap: 0.75rem;
+.signatureLink {
+    font-weight: 500;
+    color: var(--foreground);
 }
 
-.linkLabel {
-    color: var(--foreground-muted);
-}
-
-.linkValue {
-    font-weight: 600;
-    overflow-wrap: anywhere;
-}
-
-.linkValue:hover {
+.signatureLink:hover {
     color: var(--accent-text);
-}
-
-.copyright {
-    margin-top: 2rem;
-    font-size: var(--text-small);
-    color: var(--foreground-muted);
 }

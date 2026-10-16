@@ -36,8 +36,7 @@
 }
 
 .title {
-    font-size: var(--text-body);
-    font-weight: 600;
+    font-weight: 500;
 
     white-space: nowrap;
     overflow: hidden;
@@ -45,6 +44,7 @@
 }
 
 .artist {
+    color: var(--foreground-muted);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

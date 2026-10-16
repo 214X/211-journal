@@ -1,18 +1,20 @@
 {
     "tr": {
-        "heading": "Bağlantılar,",
-        "labels": {
-            "github": "GitHub",
-            "linkedin": "LinkedIn",
-            "email": "E-posta"
-        }
+        "signature": "Bu site {age}dir {name}'in ellerinde şekilleniyor.",
+        "units": {
+            "year": ["yıl", "yıl"], "day": ["gün", "gün"], "hour": ["saat", "saat"],
+            "minute": ["dakika", "dakika"], "second": ["saniye", "saniye"]
+        },
+        "contact": "İletişim",
+        "source": "Kaynak kodu"
     },
     "en": {
-        "heading": "Links,",
-        "labels": {
-            "github": "GitHub",
-            "linkedin": "LinkedIn",
-            "email": "Email"
-        }
+        "signature": "This site has been taking shape in {name}'s hands for {age}.",
+        "units": {
+            "year": ["year", "years"], "day": ["day", "days"], "hour": ["hour", "hours"],
+            "minute": ["minute", "minutes"], "second": ["second", "seconds"]
+        },
+        "contact": "Contact",
+        "source": "Source code"
     }
 }

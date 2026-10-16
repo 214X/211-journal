@@ -1,53 +1,48 @@
 import { getLocale } from "next-intl/server";
 import { getContent, Locale } from "@/i18n/getContent";
+import { Link } from "@/i18n/navigation";
 
 import footerContent from "./footerContent.json";
 import styles from "./Footer.module.css";
 import RecentlyListened from "./RecentlyListened/RecentlyListened";
+import SiteAge from "./SiteAge/SiteAge";
 
-const links = [
-    { key: 'github',   href: 'https://github.com/214X',          value: '214X',                      external: true },
-    { key: 'linkedin', href: 'https://www.linkedin.com/in/burak-kuru%C3%A7ay-877a232a7/', value: 'burak-kuruçay', external: true },
-    { key: 'email',    href: 'mailto:burakkurucaycse@gmail.com', value: 'burakkurucaycse@gmail.com', external: false },
-] as const;
+const SITE_START = "2026-07-27T20:05:51+03:00";   // first commit of the repo
+const REPO_URL = "https://github.com/214X/211-journal";
 
 export default async function Footer() {
     const locale = await getLocale();
     const t = getContent(footerContent, locale as Locale);
 
+    // the sentence holds {name} and {age} where each language wants them
+    const signature = t.signature.split(/(\{name\}|\{age\})/).map((piece, i) => {
+        if (piece === "{name}") return <strong key={i} className={styles.signatureName}>211</strong>;
+        if (piece === "{age}") return <SiteAge key={i} since={SITE_START} units={t.units} className={styles.siteAge} />;
+        return piece;
+    });
+
     return (
         <footer className={styles.footer}>
             <div className={styles.columns}>
 
-                {/* Links Section */}
-                <div>
-                    <p className={styles.heading}>{t.heading}</p>
-                    <ul className={styles.linkList}>
-                        {links.map((link) => (
-                            <li key={link.key} className={styles.linkItem}>
-                                <span className={styles.linkLabel}>
-                                    {t.labels[link.key]}
-                                </span>
-                                <a
-                                    href={link.href}
-                                    className={styles.linkValue}
-                                    target={link.external ? '_blank' : undefined}
-                                    rel={link.external ? 'noopener noreferrer' : undefined}
-                                >
-                                    {link.value} <span aria-hidden="true">↗</span>
-                                </a>
-                            </li>
-                        ))}
+                {/* Signature: who made the site and for how long */}
+                <div className={styles.signature}>
+                    <p>{signature}</p>
+                    <ul className={styles.signatureLinks}>
+                        <li>
+                            <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className={styles.signatureLink}>
+                                {t.source} <span aria-hidden="true">↗</span>
+                            </a>
+                        </li>
+                        <li>
+                            <Link href="/contact" className={styles.signatureLink}>{t.contact}</Link>
+                        </li>
                     </ul>
                 </div>
 
                 <RecentlyListened />
 
             </div>
-
-            <p className={styles.copyright}>
-                © {new Date().getFullYear()} Burak Kuruçay
-            </p>
         </footer>
     );
 }
