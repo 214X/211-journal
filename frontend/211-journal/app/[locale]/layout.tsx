@@ -43,7 +43,7 @@ const bricolage = Bricolage_Grotesque({
 // ----- FONTS ENDS ------------------------------------------------
 
 export const metadata: Metadata = {
-    title: "211-journal",
+    title: "211 Journal",
     description: "Burak Kuruçay's journal",
 };
 
